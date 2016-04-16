@@ -1,0 +1,60 @@
+<html>
+	<head>
+		
+		<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+		<script src="jquery.date-dropdowns.min.js"></script>
+		
+	</head>
+	
+	<body>
+		<p>events</p>
+		    <input id="date" data-format="DD-MM-YYYY" data-template="D MMM YYYY" name="date" value="09-01-2013" type="text">
+    <script>
+    $("example").dateDropdowns({
+	// Populate the widget with a default date.
+	defaultDate: null;
+	// The format of the date string provided to defaultDate
+	defaultDateFormat: "yyyy-mm-dd",
+	// Specify the order in which the dropdown fields should be rendered.
+	displayFormat: "dmy",
+	// Specify the format the submitted date should take.
+	submitFormat: "yyyy-mm-dd",
+	// Indicates the minimum age the widget will accept.
+	minAge: 0,
+
+	// Indicates the maximum age the widget will accept.
+	maxAge: 120,
+
+	// The lowest year option that will ba available.
+	minYear: null,
+
+	// The highest year option that will be available.
+
+	maxYear: null,
+
+	// Specify the name attribute for the hidden field that will contain the formatted date for submission.
+
+	submitFieldName: "date",
+
+	// Specify a classname to add to the widget wrapper.
+	wrapperClass: "date-dropdowns",
+
+	// Set custom classes on generated dropdown elements
+	dropdownClass: null,
+
+	// Indicates whether day numbers should include their suffixes when displayed to the user
+
+	daySuffixes: true,
+
+	monthSuffixes: true,
+	// Specify the format dates should be in when presented to the user
+	monthFormat: "long",
+
+	required: false
+
+	});
+    </script>
+		
+	</body>
+	
+</html>		

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href='https://fonts.googleapis.com/css?family=Nunito:700' rel='stylesheet' type='text/css'>
+    <title>Interests</title>
+  </head>
+  <body>
+
+  </body>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+
+    <link rel="stylesheet" href="interests.css" media="screen" title="no title" charset="utf-8">
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Interests</title>
+
+    <!-- AngularJS -->
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.15/angular.min.js"></script>
+    <!-- Firebase -->
+    <script src="https://cdn.firebase.com/js/client/2.2.4/firebase.js"></script>
+    <!-- AngularFire -->
+    <script src="https://cdn.firebase.com/libs/angularfire/1.1.3/angularfire.min.js"></script>
+    <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+    <script src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.7/angular.min.js"></script>
+
+
+    <script src="js/interestscode.js"></script>
+
+    </script>
+
+  </head>
+  <body>
+    <div class="container" ng-app="interestsApp">
+      <h1 class="col-md-8">INTERESTS</h1>
+      <!-- <h4 class="col-md-4">Welcome SDLJ!</h4> -->
+      <input type="text" class="form-control text-input" maxlength="5" placeholder="Search A Topic" ng-model="search">
+      <table class="table table-hover" ng-controller="FirstController">
+        <thead>
+          <tr>
+            <th>Interest</th>
+            <th>Description</th>
+            <!-- <th>Description</th> -->
+          </tr>
+        </thead>
+        <tbody ng-repeat="interest in interests | filter:search">
+          <tr>
+            <td>
+              <a href="map.html">{{interest.name}}</a>
+            </td>
+            <td>
+				{{interest.Description}}
+              {{interest.numberOfPeople}}
+            </td>
+            <!-- <td>
+              {{interest.numberOfPeople}}
+            </td> -->
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+  </body>
+
+
+  <script type="text/javascript">
+  jQuery(document).ready(function($) {
+      $(".clickable").click(function() {
+          window.document.location = $(this).data("href");
+      });
+  });
+  </script>
+
+</html>
